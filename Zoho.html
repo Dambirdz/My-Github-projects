@@ -1,0 +1,2644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Downloads/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #navone {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        background-color: #ffff;
+        border: 1px solid rgb(252, 253, 253);
+        z-index: 1;
+    }
+
+    #navone10 {
+        display: none;
+    }
+
+    @media (max-width:650px) {
+        #navone {
+            display: none;
+        }
+
+        #navone10 {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            position: fixed;
+            justify-content: space-between;
+            border: 0.1px solid rgb(197, 189, 189);
+            background-color: #ffff;
+            z-index: 1;
+        }
+
+        #bigContainer10 {
+            width: inherit;
+            height: inherit;
+            display: flex;
+        }
+
+        #div110 {
+            width: 85%;
+            height: 80px;
+            padding-top: 20px;
+            align-items: center;
+        }
+
+        #div310 >ul{
+            display: flex;
+            padding-right: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 15%;
+            height: 80px;
+        }
+
+        #div310 >ul> #li4{
+            padding-top: 23px;
+            padding-left: 10px;
+        }
+
+        #div310>#li3,
+        #li4 {
+            
+            width: 15px;
+            height: 70px;
+            align-items: center;
+        }
+
+        #div110>img {
+            width: 130px;
+            height: 45px;
+        }
+
+        #div210,
+        #div310>#li1,
+        #li2,
+        #ul10,
+        #div310>button {
+            display: none;
+        }
+
+        #li1 {
+            display: none;
+        }
+    }
+
+    #bigContainer {
+        width: inherit;
+        height: inherit;
+        display: flex;
+    }
+
+    #div1 {
+        width: 130px;
+        height: 80px;
+        padding-top: 20px;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    #div1>img {
+        width: 130px;
+        height: 45px;
+    }
+
+    #div2 {
+        display: flex;
+        margin-left: 20px;
+        width: 400px;
+        list-style: none;
+        justify-content: space-evenly;
+        font-family: sans-serif;
+        font-size: 18px;
+        padding-top: 30px;
+        align-items: center;
+    }
+
+    #div2>i {
+        align-items: center;
+        color: rgb(121, 128, 131);
+        padding-bottom: 13px;
+        font-size: 13px;
+        padding-right: 20px;
+    }
+
+    #div2>#pdot {
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 100px;
+        padding-bottom: 10px;
+    }
+
+    #div3 {
+        display: flex;
+    }
+
+    #div3>ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 550px;
+        align-items: center;
+        list-style: none;
+        padding-top: 30px;
+        padding-left: 400px;
+    }
+
+    #ul {
+        font-weight: bold;
+        padding-left: 10px;
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+
+    #div3 >a >#button{
+        width: 70px;
+        height: 38px;
+        color: red;
+        background-color: transparent;
+        margin-top: 20px;
+        border: 1px solid red;
+        font-size: bold;
+    }
+
+    #div3>a >#button:hover {
+        background-color: red;
+        color: white;
+    }
+
+    #s1 {
+        width: 100%;
+        height: 1000px;
+        background-color: #F8F9FB;
+    }
+
+    #s110 {
+        display: none;
+    }
+
+
+    #s1>img {
+        width: 68%;
+        height: 320px;
+        margin-top: 40px;
+    }
+
+    #container {
+        display: flex;
+        width: 100%;
+        height: 500px;
+    }
+
+    #cont1 {
+        padding-top: 180px;
+        padding-left: 110px;
+        width: 50%;
+    }
+
+    #phed {
+        font-size: 50px;
+        font-family: sans-serif;
+
+    }
+
+    #ptext {
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+
+    #cont1>button {
+        background-color: red;
+        color: white;
+        width: 200px;
+        height: 40px;
+        border: none;
+    }
+
+    #cont2 {
+        width: 28%;
+        height: 700px;
+        box-shadow: 0.5px 0.5px #9e9494;
+        background-color: white;
+        margin-top: 150px;
+        margin-left: 220px;
+    }
+
+    #cont {
+        border: 1px solid rgb(32, 192, 255);
+        width: 70%;
+        height: 180px;
+        margin: 20px auto;
+        margin-top: 60px;
+        background-color: white;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #cont>img {
+        width: 210px;
+        padding-top: 30px;
+
+    }
+
+    #pbut {
+        width: 90px;
+        background-color: green;
+        color: white;
+        height: 20px;
+        font-size: 13px;
+        border: none;
+        text-align: center;
+        margin-right: 40px;
+    }
+
+
+    #cont>#but>#divimg>img {
+        width: 190px;
+        border-right: 1px solid rgb(170, 168, 168);
+        margin-top: 60px;
+        padding-top: 30px;
+        padding-right: 70px;
+        margin-left: -40px;
+    }
+
+    #buttp {
+        width: 120px;
+        height: 40px;
+        color: white;
+        background-color: #0060B4;
+        border: none;
+    }
+
+    #divp {
+        padding-top: 30px;
+        margin-right: 60px;
+    }
+
+    #divp>p {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    #divp>img {
+        padding-right: 140px;
+    }
+
+    @media (max-width:650px) {
+        #s1 {
+            display: none;
+        }          
+
+        #s110 {
+            width: 100%;
+            display: block;
+            height: 2000px;
+            background-color: #F8F9FB;
+        }
+
+        #container10 {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            flex-direction: column;
+        }
+
+        #cont110 {
+            padding-top: 150px;
+            width: 100%;
+        }
+
+        #cont210 {
+            width: 80%;
+            height: 800px;
+            margin: 10px auto;
+            box-shadow: 0.5px 0.5px rgb(209, 194, 194);
+        }
+
+        #phed10 {
+            font-size: 40px;
+            font-family: sans-serif;
+            padding-left: 45px;
+        }
+
+        #ptext10 {
+            width: 90%;
+            padding-left: 70px;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+
+        #cont110>button {
+            background-color: red;
+            color: white;
+            width: 250px;
+            height: 45px;
+            border: none;
+            margin-left: 145px;
+            margin-top: 15px;
+        }
+
+        #cont110>button>i {
+            font-size: 13px;
+            padding-left: 20px;
+        }
+
+        #cont110>img {
+            width: 530px;
+            height: 320px;
+            padding-top: 130px;
+            margin-top: -100px;
+            position: relative;
+        }
+
+        #pp10 {
+            font-size: 19px;
+            font-family: sans-serif;
+            padding-top: 60px;
+        }
+
+        #divv110 {
+            display: flex;
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        #divv210 {
+            display: flex;
+            margin-top: 5px;
+            padding-left: 5px;
+        }
+
+        #divv310 {
+            display: flex;
+            margin-top: 5px;
+            padding-left: 0px;
+        }
+
+        #divv410 {
+            display: flex;
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        #divv510 {
+            display: flex;
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        .ct1p10 {
+            padding-top: 40px;
+            margin-right: 50px;
+            font-size: 15px;
+        }
+
+        .c110 {
+            font-size: bold;
+            font-size: 19px;
+        }
+
+        .c1t10 {
+            margin-top: 40px;
+            font-size: 15px;
+        }
+
+        #pc110 {
+            margin-top: 50px;
+            font-size: 13px;
+            padding-left: 30px;
+        }
+
+        #pc210 {
+            margin-top: 50px;
+            font-size: 13px;
+            padding-left: 15px;
+        }
+
+        #pp10 {
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+
+        .dp10 {
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            color: #0060B4;
+            margin-left: 60px;
+            margin-top: 20px;
+        }
+
+        .dp10>p {
+            font-size: 13px;
+            font-weight: 700;
+            padding-left: 30px;
+        }
+
+        .dp10>i {
+            font-size: 12px;
+            padding-top: 3px;
+        }
+
+        #pc310 {
+            margin-top: 50px;
+            font-size: 13px;
+            padding-right: 20px;
+        }
+
+        #pc410 {
+            margin-top: 50px;
+            font-size: 13px;
+            padding-left: 40px;
+        }
+
+        #pc510 {
+            margin-top: 50px;
+            font-size: 13px;
+            padding-left: 10px;
+        }
+
+        #divv110>img {
+            width: 60px;
+            height: 55px;
+        }
+
+        #divv210>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        #divv310>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        #divv410>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        #divv510>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        #cont10 {
+            width: 85%;
+            margin-left: 40px;
+            margin-top: 1000px;
+            background-color: #ffff;
+        }
+
+        #pbut10 {
+            width: 90px;
+            background-color: green;
+            color: white;
+            height: 20px;
+            font-size: 13px;
+            border: none;
+            text-align: center;
+        }
+
+        #cont10>#but10>#divimg10>img {
+            width: 190px;
+            padding-top: 20px;
+            margin-left: 75px;
+        }
+
+        #divp10 {
+            padding-top: 20px;
+            padding-left: 60px;
+        }
+
+        #buttp10 {
+            width: 120px;
+            height: 40px;
+            color: white;
+            background-color: #0060B4;
+            border: none;
+            margin-left: 70px;
+        }
+
+        #buttp10>i {
+            font-size: 10px;
+            padding-left: 12px;
+        }
+
+        #divppp10>img {
+            width: 290px;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+    }
+
+    #s2 {
+        width: 100%;
+        height: 600px;
+        background-color: #FED600;
+
+    }
+
+    #s210 {
+        display: none;
+    }
+
+    #divcont {
+        width: 90%;
+        height: inherit;
+        padding-top: 200px;
+        margin-left: 130px;
+        display: flex;
+    }
+
+    #divimg1>img {
+        width: 110px;
+        height: 100px;
+        background-color: transparent;
+    }
+
+    #divimg1 {
+        width: 120px;
+        height: inherit;
+        margin-right: 30px;
+    }
+
+    #div4 {
+        width: 50%;
+        height: 370px;
+        display: flex;
+        border-right: 1px dashed #9e9494;
+        padding-right: 40px;
+    }
+
+    #divtext>#p1 {
+        margin-bottom: 2px;
+    }
+
+    #divtext>button {
+        width: 150px;
+        height: 40px;
+        color: white;
+        background-color: red;
+        border: none;
+        font-size: 14px;
+    }
+
+    #divtext>#p2 {
+        font-size: 18px;
+        font-family: sans-serif;
+
+    }
+
+    #div5 {
+        width: 50%;
+        height: 370px
+    }
+
+    #div5>#divtext2>#cn1 {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: black;
+        align-items: center;
+        color: white;
+    }
+
+    #div5>#divtext2 {
+        margin-left: 100px;
+        height: 350px;
+
+    }
+
+    #cn1>i {
+        font-size: 18px;
+        padding-left: 12px;
+        padding-top: 10px;
+    }
+
+    #cn2>p {
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #cnimg>img {
+        width: 90px;
+    }
+
+    #cn3 {
+        display: flex;
+    }
+
+    #cn3>#cnp {
+        padding-top: 10px;
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+    #cnhed {
+        font-weight: bold;
+        margin-bottom: -0.5px;
+        margin-top: 20px;
+    }
+
+    
+    @media (max-width:650px) {
+        #s2{
+            display: none;
+        }
+
+        #s210 {
+            display: block;
+            width: 100%;
+            height: 1100px;
+            background-color: #FED600;
+        }
+
+        #divcont10 {
+        width: 100%;
+        height: inherit;
+        padding-top: 50px;
+    }
+
+    #divimg110>img {
+        width: 110px;
+        height: 100px;
+        margin-left: 230px;
+        background-color: transparent;
+    }
+
+    #p110{
+        width: inherit;
+        margin-left: 230px;
+    }
+
+    #divtext10 >h1{
+        margin-left: 195px;
+        margin-top: -7px;
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+    #p210{
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-left: 145px;
+    }
+
+    #p310{
+        height: 150px;
+        margin-left: 107px;
+        font-size: 20px;
+    }
+
+    #divtext10 >button{
+        width: 180px;
+        height: 40px;
+        color: white;
+        background-color: red;
+        border: none;
+        margin-left: 180px;
+        margin-top: 13px;
+        font-size: 14px;
+    }
+
+    #divtext10 >button >i{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+
+    #div410{
+        border-bottom: 1px dashed #9e9494;
+        padding-bottom: 55px;
+    }
+
+    #div510>#divtext210 {
+        margin-left: 150px;
+        height: 350px;
+        margin-top: 60px;
+
+    }
+
+    #div510>#divtext210>#cn110 {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: black;
+        align-items: center;
+        color: white;
+        margin-left: 110px;
+    }
+
+    #cn110>i {
+        font-size: 18px;
+        padding-left: 12px;
+        padding-top: 10px;
+    }
+
+    #cn210>p {
+        font-size: 22px;
+        padding-top: 30px;
+        margin-left: 20px;
+    }
+
+    #cnimg10>img {
+        width: 90px;
+        margin-left: 80px;
+    }
+    
+    #cnp10 > #cnhed10{
+        font-weight: bold;
+        margin-bottom: -0.5px;
+        margin-top: 20px;  
+        padding-left: 75px;
+    }
+
+    #cnp10 >p{
+        padding-left: 45px;
+    }
+    }
+
+    #s3 {
+        width: 100%;
+        height: 350px;
+        background-color: #F8F9FB;
+    }
+
+    #s310{
+        display: none;
+    }
+
+    #s3>p {
+        width: 180px;
+        margin-left: 600px;
+        padding-top: 90px;
+        font-size: 14px;
+        font-family: sans-serif;
+        margin-bottom: -50px;
+    }
+
+    #s3>#pd {
+        margin-left: 600px;
+        font-family: sans-serif;
+        color: #0060B4;
+        font-size: 12px;
+    }
+
+    #divlogo>img {
+        width: 70px;
+        height: 40px;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        margin-left: 120px;
+        margin-top: 140px;
+        margin-bottom: -38px;
+    }
+
+    @media (max-width:650px) {
+        #s3{
+            display: none;
+        }
+
+        #s310{
+            width: 100%;
+            display: block;
+            height: 450px;
+            background-color: #F8F9FB;
+        }
+
+        #s310>p {
+        width: 180px;
+        margin-left: 215px;
+        padding-top: 90px;
+        font-size: 14px;
+        font-family: sans-serif;
+        margin-bottom: -50px;
+    }
+
+    #logo101>*{
+        margin-left: 90px;
+    }
+
+    #divlogo10>#logo101 >img {
+        width: 70px;
+        height: 40px;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        margin-top: 100px;
+        margin-bottom: -38px;
+    }
+    #logo102>*{
+        margin-left: 90px;
+    }
+
+    #divlogo10>#logo102 >img {
+        width: 70px;
+        height: 40px;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        margin-top: 100px;
+        margin-bottom: -38px;
+    }
+
+    #pd10{
+        margin-left: 600px;
+        font-family: sans-serif;
+        color: #0060B4;
+        font-size: 12px 
+    }
+    #pd10 >i{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    }
+
+    #s4 {
+        width: 100%;
+        height: 570px;
+    }
+
+    #imcont {
+        width: 75%;
+        height: 450px;
+        margin: 25px auto;
+
+    }
+
+    #div6>#imcont>#im1>img {
+        width: 400px;
+        padding-left: 50px;
+    }
+
+    #cnn>i {
+        font-size: 18px;
+        padding-left: 12px;
+        padding-top: 10px;
+    }
+
+    #cnn {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: black;
+        align-items: center;
+        color: white;
+        margin-left: 85px;
+    }
+
+    #cnn2 {
+        margin-left: 10px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #pddcont>#pdd {
+        font-size: 18px;
+    }
+
+    #pddcont>p {
+        font-size: 13px;
+    }
+
+    #imcont>#cnn2>#pddcont1>button {
+        width: 150px;
+        height: 40px;
+        color: white;
+        background-color: #0060B4;
+        border: none;
+        font-size: 14px;
+    }
+
+    #divim {
+        display: flex;
+        padding-top: 10px;
+    }
+
+    #divim>img {
+        width: 50px;
+        height: 40px;
+    }
+
+    #divim>p {
+        padding-top: 7px;
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 13px;
+    }
+
+    #divv1>img {
+        width: 60px;
+        height: 40px;
+    }
+
+    #divv1 {
+        display: flex;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    .c1 {
+        font-size: bold;
+        font-size: 19px;
+    }
+
+    .c1t {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    #pc1 {
+        margin-top: 50px;
+        font-size: 13px;
+        padding-left: 30px;
+    }
+
+    #pc2 {
+        margin-top: 50px;
+        font-size: 13px;
+        padding-left: 15px;
+    }
+
+    #pp {
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .dp {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        color: #0060B4;
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+
+    .dp>p {
+        font-size: 13px;
+        font-weight: 700;
+        padding-left: 30px;
+    }
+
+    .dp>i {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+
+    #pc3 {
+        margin-top: 50px;
+        font-size: 13px;
+        padding-right: 20px;
+    }
+
+    #pc4 {
+        margin-top: 50px;
+        font-size: 13px;
+        padding-left: 40px;
+    }
+
+    #pc5 {
+        margin-top: 50px;
+        font-size: 13px;
+        padding-left: 10px;
+    }
+
+    #divv2>img {
+        width: 70px;
+        height: 40px;
+    }
+
+    #divv2 {
+        display: flex;
+        margin-top: 5px;
+        padding-left: 20px;
+    }
+
+    .ct1p {
+        padding-top: 40px;
+        margin-right: 50px;
+        font-size: 15px;
+    }
+
+    #divv4>div>#pc {
+        margin-left: -40px;
+    }
+
+    #divv3>img {
+        width: 70px;
+        height: 40px;
+    }
+
+    #divv3 {
+        display: flex;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    #divv4>img {
+        width: 60px;
+        height: 40px;
+    }
+
+    #divv4 {
+        display: flex;
+        margin-top: 5px;
+        padding-left: 10px;
+    }
+
+    #divv5>img {
+        width: 70px;
+        height: 40px;
+    }
+
+    #divv5 {
+        display: flex;
+        margin-top: 5px;
+        padding-left: 10px;
+        border-bottom: 1px solid #d6cece;
+    }
+
+    #s410{
+        display: none;
+    }
+
+    @media (max-width:650px) {
+        #s4{
+            display: none;
+        }
+
+        #s410 {
+        width: 100%;
+        background-color: #d6cece;
+        display: block;
+        height: 1150px;
+    }
+
+    #pddcont110{
+        padding-top: 50px;
+    }
+    #pddcont110 >h1{
+        font-size: 35px;
+        padding-left: 100px;
+    }
+    #pddcont110 >p{
+        font-size: 20px;
+        padding-left: 95px;
+        padding-top: 30px;
+    }
+    #pddcont110 >button{
+        width: 180px;
+        height: 45px;
+        color: white;
+        background-color: #0060B4;
+        border: none;
+        font-size: 14px; 
+        margin-left: 170px;
+    }
+    #pddcont110 >button>i{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+
+    #s410 >#imcont10 >#im110 >img{
+        width: 500px;
+        padding-left: 20px;
+    }
+    #pdd10{
+        padding-left: 60px;
+        padding-top: 20px;
+        font-size: 19px;
+    }
+    #imcont10>#im110>img {
+        width: 420px;
+        padding-left: 10px;
+        margin-top: 30px;
+    }
+    #cnhed10{
+        padding-left: 190px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    #pddd10{
+        padding-left: 185px;
+        font-size: 18px;
+        margin-top: -15px;
+    }
+    #cnimg101 >img{
+        margin-left:210px;
+        width: 120px;
+    }
+    #divim10 >img{
+        width: 50px;
+        background-color: #ffff;
+    }
+    #divim10{
+        display: flex;
+        margin-left: 200px;
+    }
+    #divim10 >p{
+        padding-left: 5px;
+        padding-top: 15px;
+    }
+    
+    }
+
+    #s5 {
+        background-color: #0060B4;
+        width: 100%;
+        height: 650px;
+        color: #ffff;
+        padding-left: 150px;
+        padding-top: 170px;
+        justify-content: space-between;
+    }
+    #s510{
+        display: none;
+    }
+
+    #s5>#hddcont {
+        display: flex;
+    }
+
+    #hd {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #hhd2 {
+        margin-left: 40px;
+    }
+
+    #hhd2>#hd>button {
+        width: 190px;
+        margin-top: 15px;
+        height: 50px;
+        background-color: transparent;
+        color: #ffff;
+        border: 1px solid white;
+    }
+
+    #hd>p {
+        border-bottom: 1px solid #d6cece;
+        margin-left: 30px;
+        padding-top: 10px;
+        font-family: sans-serif;
+    }
+
+    #hhd3>img {
+        width: 580px;
+        margin-left: 130px;
+        height: 375px;
+    }
+
+    @media (max-width:650px) {
+        #s5{
+            display: none;
+        }
+        #s510{
+            display: block;
+            background-color: #0060B4;
+            height: 950px;
+            color: #ffff;
+            padding-left: 80px;
+            padding-top: 150px;
+            width: 100%;
+        }
+        #s510>#hddcont10 {
+        display: flex;
+    }#hd10 {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #hhd210 {
+        margin-left: 40px;
+    }
+
+    #hhd210>#hd10>button {
+        width: 190px;
+        margin-top: 15px;
+        height: 50px;
+        background-color: transparent;
+        color: #ffff;
+        border: 1px solid white;
+    }
+    #hd10>button>i{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    #hd10>p {
+        border-bottom: 1px solid #d6cece;
+        margin-left: 15px;
+        padding-top: 10px;
+        font-family: sans-serif;
+    }
+
+    #hhd310>img {
+        width: 400px;
+        height: 375px;
+    }
+}
+
+    #s6 {
+        justify-content: space-between;
+        width: 100%;
+        height: 500px;
+    }
+    #s610{
+        display: none;
+    }
+
+    #cnimd>img {
+        width: 70px;
+        margin-left: 300px;
+    }
+
+    #d {
+        font-size: 40px;
+        font-family: sans-serif;
+        padding-left: 65px;
+    }
+
+    #d2 {
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+
+    #imdc>img {
+        width: 32px;
+        height: 40px;
+    }
+
+    #imdc {
+        display: flex;
+        width: 170px;
+        height: 10px;
+    }
+
+    #imdd>button {
+        margin-left: 230px;
+        color: #0060B4;
+        border: 1px solid #0060B4;
+        background-color: white;
+        margin-top: 20px;
+    }
+
+    #imdd {
+        margin-left: 300px;
+        padding-top: 100px;
+    }
+
+    @media (max-width:650px) {
+        #s6{
+            display: none;
+        }
+        #s610{
+            display: block;
+            width: 100%;
+            height: 650px;
+        }
+        #cnimd10>img {
+        width: 70px;
+        margin-left: 250px;
+    }
+    #d10{
+        font-size: 40px;
+        font-family: sans-serif;
+        padding-left: 115px;
+    }
+    #pside10{
+        font-size: 40px;
+        margin-top: -20px;
+        font-family: sans-serif;
+        padding-left: 170px;
+    }
+
+    #d210 {
+        font-size: 18px;
+        padding-left: 70px;
+        font-family: sans-serif;
+    }
+    #pin10{
+        font-size: 18px;
+        padding-left: 220px;
+        margin-top: -18px;
+        font-family: sans-serif;
+    }
+    #imdc10>img {
+        width: 32px;
+        height: 40px;
+    }
+
+    #imdc10{
+        display: flex;
+        width: 170px;
+        height: 10px;
+    }
+
+    #imdd10>button {
+        margin-left: 200px;
+        color: #0060B4;
+        border: 1px solid #0060B4;
+        background-color: white;
+        margin-top: 15px;
+    }
+
+    #imdd10 {
+        padding-top: 100px;
+    }
+    }
+
+    #s7>img {
+        width: 100%;
+        height: 440px;
+    }
+    @media (max-width:650px) {
+        #s7>img{
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    #secsec {
+        background-color: #F8F9FB;
+    }
+    #secsec10{
+        display: none;
+    }
+
+    .sec {
+        width: 75%;
+        height: 600px;
+        background-color: white;
+        margin-left: 190px;
+        position: relative;
+        margin-top: -120px;
+    }
+
+    #seccont {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        padding-top: 130px;
+    }
+
+    #secbut>button {
+        background-color: #0060B4;
+        color: white;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-left: 400px;
+        margin-top: 30px;
+    }
+
+    #divh>h1 {
+        font-size: 35px;
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+
+    #secbut>button>i {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    @media (max-width:650px) {
+        #secsec{
+            display: none;
+        }
+        #secsec10{
+            display: block;
+            background-color: #c1c3c9;
+        }
+        .sec10 {
+        width: 75%;
+        height: 1600px;
+        background-color: white;
+        margin-left: 90px;
+        border-radius: 15px;
+        margin-top: -150px;
+        position: relative;
+        padding-top: 30px;
+    }
+    #seccont10 {
+        display: block;
+        width: 75%;
+        margin-left: 80px;
+        justify-content: space-evenly;
+        padding-top: 140px;
+    }
+    #secbut10>button {
+        background-color: #0060B4;
+        color: white;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-left: 140px;
+        margin-top: 30px;
+    }
+    #ppp101>img{
+        width: 160px;
+        margin-left: 40px;
+    }
+    #divh10>h1 {
+        padding-left: 20px;
+        padding-top: 60px;
+        font-size: 38px;
+    }
+    #secbut10>button>i {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    }
+
+    #s8 {
+        background-color: #F8F9FB;
+        width: 100%;
+        height: 500px;
+        display: flex;
+    }
+    #s810{
+        display: none;
+    }
+
+    #sect {
+        margin-left: 230px;
+        padding-top: 100px;
+    }
+
+    #secp {
+        background-color: black;
+        color: #ffff;
+        width: 70px;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #secimg>img {
+        width: 300px;
+        height: 380px;
+        margin-left: 70px;
+        margin-top: 90px;
+    }
+
+    #sect>button {
+        width: 200px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid #0060B4;
+        color: #0060B4;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    #sect>button>i {
+        padding-left: 10px;
+    }
+    @media (max-width:650px) {
+        #s8{
+            display: none;
+        }
+        #s810{
+            width: 100%;
+            height: 1000px;
+            display: block;
+            background-color: #F8F9FB;
+        }
+        #sect10{
+        margin-left: 70px;
+        padding-top: 100px;
+    }
+    #secp10 {
+        background-color: black;
+        color: #ffff;
+        width: 70px;
+        margin-left: 210px;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #h110{
+        margin-left: 130px;
+    }
+    #ppp10{
+        margin-left: 50px;
+    }
+
+    #secimg10>img {
+        width: 300px;
+        height: 380px;
+        margin-left: 190px;
+        margin-top: 90px;
+    }
+
+    #sect10>button {
+        width: 180px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid #0060B4;
+        color: #0060B4;
+        font-size: 12px;
+        margin-left: 180px;
+        font-weight: bold;
+    }
+    #sect10>button>i {
+        padding-left: 10px;
+    }
+
+    }
+
+    #s9 {
+        width: 100%;
+        height: 900px;
+        background-color: #ebebeb
+    }
+    #s910{
+        display: none;
+    }
+
+    #divul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    #divul>ul:hover {
+        color: #0060B4;
+    }
+
+    .p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 140px;
+    }
+
+    #s9>h1 {
+        padding-left: 400px;
+        padding-top: 100px;
+    }
+
+    #s9>h2 {
+        padding-left: 490px;
+        padding-top: 10px;
+    }
+
+    #s9>button {
+        margin-left: 590px;
+        margin-top: 40px;
+        width: 170px;
+        height: 45px;
+        background-color: red;
+        border: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    #pcont {
+        display: flex;
+        width: 300px;
+        margin-top: 70px;
+        margin-left: 500px;
+        justify-content: space-evenly;
+    }
+
+    #pa>img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #pb>img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #pcc>img {
+        width: 45px;
+        height: 40px;
+    }
+
+    #pddd>img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #pe>img {
+        width: 30px;
+        height: 40px;
+    }
+
+    #dived {
+        display: flex;
+        justify-content: space-evenly;
+        width: 600px;
+        font-size: 12px;
+        margin-left: 400px;
+    }
+
+    #dived>p {
+        border-right: 1px solid #9e9494;
+        padding-right: 5px;
+    }
+
+    #dived2>p {
+        border-right: 1px solid #9e9494;
+        padding-right: 5px;
+    }
+
+    #dived2 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 300px;
+        font-size: 12px;
+        margin-left: 500px;
+    }
+
+    #dived2>.pp {
+        border-right: none;
+    }
+    @media (max-width:650px) {
+        #s9{
+            display: none;
+        } 
+        #s910{
+            display: block;
+            height: 600px;
+            width: 100%;
+        }
+        #s910>h1 {
+        padding-left: 150px;
+        padding-top: 100px;
+        }
+        #s910>h3 {
+        padding-left: 240px;
+        padding-top: 7px;
+        color: #616366;
+        }
+        #s910>button {
+        margin-left: 270px;
+        margin-top: 15px;
+        width: 170px;
+        height: 45px;
+        background-color: red;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    #s910>button>i{
+        font-size: 13px;
+        padding-left: 10px;
+    }
+    #s910 >#p11{
+        padding-top: 15px;
+        border-bottom: 1px solid rgb(241, 231, 231);
+        padding-bottom: 8px;
+    }
+    #s910 >#p11>i{
+        font-size: 13px;
+        padding-left: 450px;
+        color: #9ea0a5;
+    }
+    #s910 >#p112{
+        border-bottom: 1px solid rgb(241, 231, 231);
+        padding-bottom: 8px;
+    }
+    #s910 >#p112>i{
+        font-size: 13px;
+        padding-left: 552px;
+        color: #9ea0a5;
+    }
+    #s910 >#p113{
+        border-bottom: 1px solid rgb(241, 231, 231);
+        padding-bottom: 8px;
+    }
+    #s910 >#p113>i{
+        font-size: 13px;
+        padding-left: 509px;
+        color: #9ea0a5;
+    }
+    #s910 >#p114{
+        border-bottom: 1px solid rgb(241, 231, 231);
+        padding-bottom: 8px;
+    }
+    #s910 >#p114>i{
+        font-size: 13px;
+        padding-left: 525px;
+        color: #9ea0a5;
+    }
+    #s910 >#p115{
+        border-bottom: 1px solid rgb(241, 231, 231);
+        padding-bottom: 8px;
+    }
+    #s910 >#p115>i{
+        font-size: 13px;
+        padding-left: 522px;
+        color: #9ea0a5;
+    }
+    #s910 >#p116{
+        border-bottom: 1px solid rgb(241, 231, 231);
+        padding-bottom: 8px;
+    }
+    #s910 >#p116>i{
+        font-size: 13px;
+        padding-left: 450px;
+        color: #9ea0a5;
+    }
+    }
+
+    #seclast {
+        background-color: #0B0D1F;
+        width: 100%;
+        height: 130px;
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+    #seclast10{
+        display: none;
+    }
+
+    #seclast1>img {
+        width: 80px;
+        height: 40px;
+        margin-left: 320px;
+    }
+
+    #seclast2 {
+        font-size: 12px;
+        color: white;
+        padding-top: 20px;
+        padding-left: 220px;
+    }
+
+    #ppp>img {
+        width: 120px;
+        height: 70px;
+        margin-top: -70px;
+    }
+    @media (max-width:650px){
+        #seclast{
+            display: none;
+        }
+        #seclast10 {
+        background-color: #0B0D1F;
+        width: 100%;
+        height: 130px;
+        padding-top: 30px;
+        display: block;
+    }
+
+    #seclast110>img {
+        width: 80px;
+        height: 40px;
+        margin-left: 260px;
+    }
+
+    #seclast210 {
+        font-size: 12px;
+        color: white;
+        padding-top: 20px;
+        margin-left: 180px;
+
+    }
+
+    #ppp>img {
+        width: 120px;
+        height: 70px;
+    }
+    }
+    #sone1{
+        display: none;
+    }
+    #sone12{
+        display: none;
+    }
+    @media (max-width:650){
+        #sone1{
+            display: none;
+        }
+        #sone12{
+            width: 100%;
+            height: 40px;
+            display: block;
+            border: 1px solid red;
+        }
+        #divone1230{
+            display: flex;
+        }
+
+    }
+</style>
+
+<body>
+    <nav id="navone">
+        <div id="bigContainer">
+            <div id="div1">
+                <img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt="">
+            </div>
+            <div id="div2">
+                <p>Products</p><i class="fa-solid fa-chevron-down"></i>
+                <p id="p2">Customers</p>
+                <p>Company</p><i class="fa-solid fa-chevron-down"></i>
+                <p id="pdot">...</p>
+            </div>
+            <div id="div3">
+                <ul>
+                    <li id="li1"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li id="li2"><i class="fa-solid fa-bullhorn"></i></li>
+                    <li id="li3"><i class="fa-solid fa-globe"></i></li>
+                    <li id="li4">EN</li>
+                </ul>
+                <p id="ul">Sign in</p>
+                <a href="./Zoho sign up page.html" target="_blank"><button id="button">Sign up</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="navone10">
+        <div id="bigContainer10">
+            <div id="div110">
+                <img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt="">
+            </div>
+            <div id="div210">
+                <p>Products</p><i class="fa-solid fa-chevron-down"></i>
+                <p id="p210">Customers</p>
+                <p>Company</p><i class="fa-solid fa-chevron-down"></i>
+                <p id="pdot10">...</p>
+            </div>
+            <div id="div310">
+                <ul>
+                    <li id="li1"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li id="li2"><i class="fa-solid fa-bullhorn"></i></li>
+                    <li id="li3"><i class="fa-solid fa-globe"></i></li>
+                    <li id="li4">EN</li>
+                </ul>
+                <p id="ul10">Sign in</p>
+                <button>Sign up</button>
+            </div>
+        </div>
+    </nav>
+    <section id="s1">
+        <div id="container">
+            <div id="cont1">
+                <p id="phed">Your life's work,<br>
+                    powered by our life's work
+                </p>
+                <p id="ptext">A unique and powerful software suite to transform the <br>way you work. Designed for
+                    businesses of all sizes, built <br>by a company that values your privacy.</p>
+                <button>GET STARTED FOR FREE<i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div id="cont2">
+                <p id="pp">FEATURED APPS</p>
+                <div id="divv1"><img src="https://www.interlooptechnologies.com/wp-content/uploads/2021/06/zoho-crm.png"
+                        alt="">
+                    <div>
+
+                    </div>
+                    <p class="c1">CRM</p>
+                    <p class="c1t">Comprehensive CRM platform <br>for customer-facing team.</p>
+                    <p id="pc1"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv2"><img
+                        src="https://play-lh.googleusercontent.com/g3K354Wk7S0uAdwgZ8n5Jnt9ym-B5l_xbrh62jeIW4V6ztuLfcUUe1B_YDncMbesng"
+                        alt="">
+                    <div>
+
+                    </div>
+                    <p class="c1">MAIL</p>
+                    <p class="c1t">Secure email services for your <br>business.</p>
+                    <p id="pc2"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv3"><img src="https://asset.brandfetch.io/idgz6FlupR/idwXvf6SbJ.jpeg" alt="">
+                    <div>
+
+                    </div>
+                    <p class="c1">BOOKS</p>
+                    <p class="ct1p">Powerful accounting platform <br>for growing businesses.</p>
+                    <p id="pc3"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv4"><img src="https://help.zoho.com/portal/api/departments/4000000099140/logo?orgId=4241905"
+                        alt="">
+                    <div>
+
+                    </div>
+                    <p class="c1">DESK</p>
+                    <p class="c1t">Helpdesk software to deliver <br>great customer support.</p>
+                    <p id="pc4"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv5"><img
+                        src="https://www.zohowebstatic.com/sites/zweb/images/creator/images/creator-icon.png" alt="">
+                    <div>
+
+                    </div>
+                    <p class="c1">CREATOR</p>
+                    <p class="c1t">Build custom apps for your <br>business need.</p>
+                    <p id="pc5"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div class="dp">
+                    <p>EXPLORE ALL PRODUCTS</p><i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-homev2-banner.webp" alt="">
+        <div id="cont">
+            <p id="pbut">spotlight</p>
+            <div id="but">
+                <div id="divimg"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvl_iRWdaPNJ9ybmJ4VoVPpL9vCxplwf2zr8AmvalcHA&s"
+                        alt=""></div>
+            </div>
+            <div id="divp">
+                <p>A complete solution for every billing <br>requirement.</p><button id="buttp">Try Now<i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-announcement-billing.png"
+                alt="">
+        </div>
+        <div id=""></div>
+    </section>
+
+    <section id="s110">
+        <div id="container10">
+            <div id="cont110">
+                <p id="phed10">Your life's work,<br>
+                    powered by our life's work
+                </p>
+                <p id="ptext10">A unique and powerful software suite to transform the <br>way you work. Designed for
+                    businesses of all sizes, built <br>by a company that values your privacy.</p>
+                <button>GET STARTED FOR FREE<i class="fa-solid fa-chevron-right"></i></button>
+                <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-homev2-banner.webp"
+                    alt="">
+            </div>
+            <div id="cont210">
+                <p id="pp10">FEATURED APPS</p>
+                <div id="divv110"><img
+                        src="https://www.interlooptechnologies.com/wp-content/uploads/2021/06/zoho-crm.png" alt="">
+                    <div>
+
+                    </div>
+                    <p class="c110">CRM</p>
+                    <p class="c1t10">Comprehensive CRM platform <br>for customer-facing team.</p>
+                    <p id="pc110"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv210"><img
+                        src="https://play-lh.googleusercontent.com/g3K354Wk7S0uAdwgZ8n5Jnt9ym-B5l_xbrh62jeIW4V6ztuLfcUUe1B_YDncMbesng"
+                        alt="">
+                    <div>
+
+                    </div>
+                    <p class="c110">MAIL</p>
+                    <p class="c1t10">Secure email services for your <br>business.</p>
+                    <p id="pc210"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv310"><img src="https://asset.brandfetch.io/idgz6FlupR/idwXvf6SbJ.jpeg" alt="">
+                    <div>
+
+                    </div>
+                    <p class="c110">BOOKS</p>
+                    <p class="ct1p10">Powerful accounting platform <br>for growing businesses.</p>
+                    <p id="pc310"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv410"><img
+                        src="https://help.zoho.com/portal/api/departments/4000000099140/logo?orgId=4241905" alt="">
+                    <div>
+
+                    </div>
+                    <p class="c110">DESK</p>
+                    <p class="c1t10">Helpdesk software to deliver <br>great customer support.</p>
+                    <p id="pc410"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div id="divv510"><img
+                        src="https://www.zohowebstatic.com/sites/zweb/images/creator/images/creator-icon.png" alt="">
+                    <div>
+
+                    </div>
+                    <p class="c110">CREATOR</p>
+                    <p class="c1t10">Build custom apps for your <br>business need.</p>
+                    <p id="pc510"><i class="fa-solid fa-chevron-right"></i></p>
+                </div>
+                <div class="dp10">
+                    <p>EXPLORE ALL PRODUCTS</p><i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="cont10">
+            <p id="pbut10">spotlight</p>
+            <div id="but10">
+                <div id="divimg10"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvl_iRWdaPNJ9ybmJ4VoVPpL9vCxplwf2zr8AmvalcHA&s"
+                        alt=""></div>
+            </div>
+            <div id="divp10">
+                <p>A complete solution for every billing <br>requirement.</p><button id="buttp10">Try Now<i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div id="divppp10"><img
+                    src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-announcement-billing.png"
+                    alt=""></div>
+        </div>
+    </section>
+    <section id="s2">
+        <div id="divcont">
+            <div id="div4">
+                <div id="divimg1"><img
+                        src="https://www.zohowebstatic.com/sites/zweb/images/one/india/one-banner-poster.png"></div>
+                <div id="divtext">
+                    <P id="p1">All-in-one suite</P>
+                    <h1>Zoho One</h1>
+                    <P id="p2">The operating system for business</P>
+                    <P id="p3">Run your entire business on Zoho with our unified cloud <br>
+                        software, designed to help you break down silos between <br>
+                        departments and increase organizational efficiency.
+                    </P>
+                    <button>TRY ZOHO ONE<i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div id="div5">
+                <div id="divtext2">
+                    <div id="cn1">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div id="cn2">
+                        <p>
+                            "Zoho continues to modify, adapt,<br>
+                            grow, and add things to the <br>
+                            platform that our business sees <br>
+                            value in."
+                        </p>
+                    </div>
+                    <div id="cn3">
+                        <div id="cnimg"><img
+                                src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-video-poster-paul.png"
+                                alt=""></div>
+                        <div id="cnp">
+                            <p id="cnhed">Paul Grimes</p>
+                            <p>Chief Operating Officer,<br>
+                                Lubrication Engineers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="s210">
+        <div id="divcont10">
+            <div id="divimg110"><img
+                src="https://www.zohowebstatic.com/sites/zweb/images/one/india/one-banner-poster.png"></div>
+            <div id="div410">
+                <div id="divtext10">
+                    <P id="p110">All-in-one suite</P>
+                    <h1>Zoho One</h1>
+                    <P id="p210">The operating system for business</P>
+                    <P id="p310">Run your entire business on Zoho with <br>our unified cloud 
+                        software, designed to <br>help you break down silos between <br>
+                        departments and increase organizational <br>efficiency.
+                    </P>
+                    <button>TRY ZOHO ONE<i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div id="div510">
+                <div id="divtext210">
+                    <div id="cn110">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div id="cn210">
+                        <p>
+                            "Zoho continues to modify, <br>adapt,
+                            grow, and add things <br>to the 
+                            platform that our <br>business sees 
+                            value in."
+                        </p>
+                    </div>
+                    <div id="cn310">
+                        <div id="cnimg10"><img
+                                src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-video-poster-paul.png"
+                                alt=""></div>
+                        <div id="cnp10">
+                            <p id="cnhed10">Paul Grimes</p>
+                            <p>Chief Operating Officer,<br>
+                                Lubrication Engineers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="s3">
+        <p>Brands that trust us</p>
+        <div id="divlogo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXVMmnrhaGdbm8UYM6JKWz_Qv_ejQLmfd-AQ&usqp=CAU"
+                alt="">
+            <img src="https://seeklogo.com/images/K/kpmg-logo-64F71A7AD9-seeklogo.com.png" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPuyAr0w88WnEERNTuJfSlt6BYIxCVDF5MGjpSfczfEWm8pSUKfY1N8GBgoIJD3ZNJ66M&usqp=CAU"
+                alt="">
+            <img src="https://cdn-icons-png.freepik.com/512/5968/5968579.png" alt="">
+            <img src="https://companieslogo.com/img/orig/HPQ-30e5d607.png?t=1682650685" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeg4bx65cIRKt4WQqJKLc_m3ymTv9hCN2hgg&usqp=CAU"
+                alt="">
+        </div>
+        <p id="pd">CUSTOMER STORIES<i class="fa-solid fa-chevron-right"></i></p>
+    </section>
+
+    <section id="s310">
+        <p>Brands that trust us</p>
+        <div id="divlogo10">
+            <div id="logo101"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXVMmnrhaGdbm8UYM6JKWz_Qv_ejQLmfd-AQ&usqp=CAU"
+                alt="">
+            <img src="https://seeklogo.com/images/K/kpmg-logo-64F71A7AD9-seeklogo.com.png" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPuyAr0w88WnEERNTuJfSlt6BYIxCVDF5MGjpSfczfEWm8pSUKfY1N8GBgoIJD3ZNJ66M&usqp=CAU"
+                alt=""></div>
+            <div id="logo102"><img src="https://cdn-icons-png.freepik.com/512/5968/5968579.png" alt="">
+            <img src="https://companieslogo.com/img/orig/HPQ-30e5d607.png?t=1682650685" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeg4bx65cIRKt4WQqJKLc_m3ymTv9hCN2hgg&usqp=CAU"
+                alt=""></div>
+        </div>  
+        <p id="pd10">CUSTOMER STORIES<i class="fa-solid fa-chevron-right"></i></p>
+    </section>
+    <section id="s4">
+        <div id="div6">
+            <div id="imcont">
+                <div id="im1"><img
+                        src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-enterprise-illus.svg"
+                        alt=""></div>
+                <div id="cnn">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div id="cnn2">
+                    <div id="pddcont">
+                        <p id="pdd">"Zoho's operating system is <br>
+                            very robust and contains <br>
+                            the collective memory of <br>
+                            Selectra's entire business."</p>
+                        <p id="cnhed">Aurian De Maupeou</p>
+                        <p> Co-Founder, Selectra</p>
+                    </div>
+                    <div id="pddcont2">
+                        <div id="cnimg"><img
+                                src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-testimonial-poster.png"
+                                alt=""></div>
+                        <div id="divim"><img
+                                src="https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/4dc95f9a-0c4f-42ff-eded-0da4aafcb200/thumbnail"
+                                alt="">
+                            <p>watch video</p>
+                        </div>
+                    </div>
+                    <div id="pddcont1">
+                        <h1>Zoho for <br>Enterprises</h1>
+                        <p>
+                            Experience the breadth and depth of the Zoho <br>
+                            ecosystem, with the professional services, infrastructure,<br>
+                            support, and security that a large business needs. <br>
+                            Streamline complex business processes, build strong <br>
+                            relationships with your customers, and drive growth at <br>
+                            scale
+                        </p>
+                        <button>GET IN TOUCH<i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="s410">
+            <div id="pddcont110">
+                        <h1>Zoho for Enterprises</h1>
+                        <p>
+                            Experience the breadth and depth of the <br>Zoho 
+                            ecosystem, with the professional <br>services, infrastructure,
+                            support, and <br>security that a large business needs. <br>
+                            Streamline complex business processes, <br>build strong 
+                            relationships with your <br>customers, and drive growth at 
+                            scale
+                        </p>
+                        <button>LEARN MORE<i class="fa-solid fa-chevron-right"></i></button>
+
+                    </div>
+            <div id="imcont10">
+                <div id="im110"><img
+                        src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-enterprise-illus.svg"
+                        alt=""></div> 
+                
+                <div id="cnn210">
+                    <div id="pddcont10">
+                        <p id="pdd10">"Zoho's operating system is 
+                            very robust and contains <br>
+                            the collective memory of 
+                            Selectra's entire business."</p>
+                        <p id="cnhed10">Aurian De Maupeou</p>
+                        <p id="pddd10"> Co-Founder, Selectra</p>
+                    </div>
+                    <div id="pddcont210">
+                        <div id="cnimg101"><img
+                                src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-testimonial-poster.png"
+                                alt=""></div>
+                        <div id="divim10"><img
+                                src="https://imagedelivery.net/5MYSbk45M80qAwecrlKzdQ/4dc95f9a-0c4f-42ff-eded-0da4aafcb200/thumbnail"
+                                alt="">
+                            <p>watch video</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="s5">
+        <div>
+            <h1>Business Software. <br>
+                Our Craft. Our Passion.</h1>
+        </div>
+        <div id="hddcont">
+            <div id="hhd1">
+                <div id="hd">
+                    <h1>100M+</h1>
+                    <p>Users <br>Globally</p>
+                </div>
+                <div id="hd">
+                    <h1>15K+</h1>
+                    <p>Employees <br>Worldwide</p>
+                </div>
+                <div id="hd">
+                    <h1>55+</h1>
+                    <p>Products</p>
+                </div>
+            </div>
+            <div id="hhd2">
+                <div id="hd">
+                    <h1>150+</h1>
+                    <p>Countries <br>Served</p>
+                </div>
+                <div id="hd">
+                    <h1>25+</h1>
+                    <p>Years in <br>Business</p>
+                </div>
+                <div id="hd"><button>MORE ABOUT ZOHO<i class="fa-solid fa-chevron-right"></i></button></div>
+            </div>
+            <div id="hhd3"><img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/made-au-bg.png"
+                    alt=""></div>
+        </div>
+    </section>
+    <section id="s510">
+        <div>
+            <h1>Business Software. <br>
+                Our Craft. Our Passion.</h1>
+        </div>
+        <div id="hddcont10">
+            <div id="hhd110">
+                <div id="hd10">
+                    <h1>100M+</h1>
+                    <p>Users <br>Globally</p>
+                </div>
+                <div id="hd10">
+                    <h1>15K+</h1>
+                    <p>Employees <br>Worldwide</p>
+                </div>
+                <div id="hd10">
+                    <h1>55+</h1>
+                    <p>Products</p>
+                </div>
+            </div>
+            <div id="hhd210">
+                <div id="hd10">
+                    <h1>150+</h1>
+                    <p>Countries <br>Served</p>
+                </div>
+                <div id="hd10">
+                    <h1>25+</h1>
+                    <p>Years in <br>Business</p>
+                </div>
+                <div id="hd10"><button>MORE ABOUT ZOHO<i class="fa-solid fa-chevron-right"></i></button></div>
+            </div>            
+        </div>
+        <div id="hhd310">
+                <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/made-au-bg.png"alt="">
+            </div>
+    </section>
+    <section id="s6">
+        <div id="imdd">
+            <div id="cnimd">
+                <img src="https://cdn-icons-png.freepik.com/512/5781/5781297.png" alt="">
+            </div>
+            <p id="d">Your privacy is our responsibility</p>
+            <p id="d2">
+                We believe that trust is paramount in a relationship. We do not own or sell your data, and we <br>
+                most certainly do not bank on advertising-based business models. The only way we make <br>
+                money is from the software license fees you pay us.
+            </p>
+            <button>
+                <div id="imdc"><img
+                        src="https://www.videomarketingas.lt/wp-content/uploads/2022/07/CITYPNG.COMHD-Red-Neon-Youtube-YT-Logo-Symbol-Sign-Icon-PNG-3712x2661.png"
+                        alt=""></div>
+                <p>WATCH VIDEO</p>
+            </button>
+        </div>
+    </section>
+    <section id="s610">
+        <div id="imdd10">
+            <div id="cnimd10">
+                <img src="https://cdn-icons-png.freepik.com/512/5781/5781297.png" alt="">
+            </div>
+            <p id="d10">Your privacy is our <p id="pside10">responsibility</p></p>
+            <p id="d210">
+                We believe that trust is paramount in a relationship. We <br>do not own or sell your data, and we 
+                most certainly do <br>not bank on advertising-based business models. The <br>only way we make 
+                money is from the software license <br>
+                <p id="pin10">fees you pay us.</p>
+            </p>
+            <button>
+                <div id="imdc10"><img
+                        src="https://www.videomarketingas.lt/wp-content/uploads/2022/07/CITYPNG.COMHD-Red-Neon-Youtube-YT-Logo-Symbol-Sign-Icon-PNG-3712x2661.png"
+                        alt=""></div>
+                <p>WATCH VIDEO</p>
+            </button>
+        </div>
+    </section>
+    <section id="s7">
+        <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/core-value-banner-img.webp" alt="">
+    </section>
+    
+    <section id="secsec">
+        <div class="sec">
+            <div id="divh">
+                <h1>The core values and <br>principles that drive us</h1>
+            </div>
+            <div id="seccont">
+                <div>
+                <p id="ppp"><img src="https://www.freeiconspng.com/thumbs/handshake-icon/blue-handshake-icon-12.png" alt=""></p>
+                    <h3>Long-term <br>commitment</h3>
+                    <h6>
+                        25 years of running a profitable <br>
+                        organization gives us a good sense <br>
+                        of challenges that a growing <br>
+                        business faces. We take pride in <br>
+                        running a sustainable business <br>
+                        that’s powered by you, our <br>
+                        customer.
+                    </h6>
+                </div>
+                <div>
+                    <p id="ppp"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKZw47TIjbNOv9nrYNWZtg9GyiMdq1MOblRQaEN6FiGuLM1oq2DD1dJ_3nhqBNZYjmdiA&usqp=CAU" alt=""></p>
+                    <h3>Focus on research <br>& development</h3>
+                    <h6>Software is our craft and we back it <br>
+                         up with our relentless investments in <br>
+                         R&D. So much so that we prefer to <br>
+                         own the entire technology stack,<br>
+                         including running our data centers <br>
+                         globally.
+                        </h6>
+                </div>
+                <div>
+                    <p id="ppp"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXpIHc5ggBkEiw7OWAHfxC3moFvaDJ01dCfJQMjngjZEiRnc3r" alt=""></p>
+                    <h3>Customer-first <br>philosophy</h3>
+                    <h6>
+                        In all these years, it's our <br>
+                        customers' trust and goodwill that <br>
+                        has helped us establish a strong <br>
+                        position in the market. No matter <br>
+                        the size of your business, we're <br>
+                        here to help you grow.
+                    </h6>
+                </div>
+            </div>
+            <div id="secbut"><button>Read our story<i class="fa-solid fa-chevron-right"></i></button></div>
+</section>
+    <section id="secsec10">
+        <div class="sec10">
+            <div id="divh10">
+                <h1>The core values and <br>principles that drive us</h1>
+            </div>
+            <div id="seccont10">
+                <div>
+                <p id="ppp101"><img src="https://www.freeiconspng.com/thumbs/handshake-icon/blue-handshake-icon-12.png" alt=""></p>
+                    <h2>Long-term commitment</h2>
+                    <h6>
+                        25 years of running a profitable <br>
+                        organization gives us a good sense <br>
+                        of challenges that a growing <br>
+                        business faces. We take pride in <br>
+                        running a sustainable business <br>
+                        that’s powered by you, our <br>
+                        customer.
+                    </h6>
+                </div>
+                <div>
+                    <p id="ppp10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKZw47TIjbNOv9nrYNWZtg9GyiMdq1MOblRQaEN6FiGuLM1oq2DD1dJ_3nhqBNZYjmdiA&usqp=CAU" alt=""></p>
+                    <h2>Focus on research &<br> development</h2>
+                    <h6>Software is our craft and we back it <br>
+                         up with our relentless investments in <br>
+                         R&D. So much so that we prefer to <br>
+                         own the entire technology stack,<br>
+                         including running our data centers <br>
+                         globally.
+                        </h6>
+                </div>
+                <div>
+                    <p id="ppp10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXpIHc5ggBkEiw7OWAHfxC3moFvaDJ01dCfJQMjngjZEiRnc3r" alt=""></p>
+                    <h2>Customer-first philosophy</h2>
+                    <h6>
+                        In all these years, it's our <br>
+                        customers' trust and goodwill that <br>
+                        has helped us establish a strong <br>
+                        position in the market. No matter <br>
+                        the size of your business, we're <br>
+                        here to help you grow.
+                    </h6>
+                </div>
+            </div>
+            <div id="secbut10"><button>Read our story<i class="fa-solid fa-chevron-right"></i></button></div>
+</section>
+    <section id="s8">
+        <div id="sect">
+            <div id="secp">
+                <p>Forbes</p>
+            </div>
+            <div>
+                <h1>
+                    Vision from a village
+                </h1>
+            </div>
+            <div>
+                <p>
+                    "Why Zoho's CEO moved from California to a hamlet in Tamil Nadu: <br>
+                    The lessons this holds for an economy that wants to be self-reliant; for <br>
+                    corporations headquartered in big cities; and a country with a high <br>
+                    density of urban and migrant workers coming to grips with a <br>
+                    pandemic."
+                </p>
+            </div>
+            <button>MORE ON FORBES<i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div id="secimg">
+            <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-forbes-new.webp" alt="">
+        </div>
+    </section>
+    <section id="s810">
+        <div id="sect10">
+            <div id="secp10">
+                <p>Forbes</p>
+            </div>
+            <div>
+                <h1 id="h110">
+                    Vision from a village
+                </h1>
+            </div>
+            <div id="ppp10">
+                <p>
+                    "Why Zoho's CEO moved from California to a hamlet in Tamil Nadu: <br>
+                    The lessons this holds for an economy that wants to be self-reliant; for <br>
+                    corporations headquartered in big cities; and a country with a high <br>
+                    density of urban and migrant workers coming to grips with a <br>
+                    pandemic."
+                </p>
+            </div>
+            <button>MORE ON FORBES<i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div id="secimg10">
+            <img src="https://www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-forbes-new.webp" alt="">
+        </div>
+    </section>
+     <section id="s9">
+        <h1>Ready to do your best work?</h1>
+        <h2>Let's get you started.</h2>
+        <button>SIGN UP NOW<i class="fa-solid fa-chevron-right"></i></button>
+        <div id="divul">
+            <div>
+                <div>
+                    <p class="p">Apps and Extensions</p>
+                    <ul>
+                        <li>Mobile Apps</li>
+                        <li>Google Workspace Integration</li>
+                        <li>Microsoft 365 Integration</li>
+                        <li>Apps for Apple Watch</li>
+                        <li>Product Integrations</li>
+                        <li>Marketplace</li>
+                        <li>Browser Extensions</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p class="p">Learn</p>
+                    <ul>
+                        <li>Training & Certification</li>
+                        <li> Academy</li>
+                        <li>Blog</li>
+                        <li>Perspectives</li>
+                        <li>Knowledge Base</li>
+                        <li>Zia</li>
+                        <li>The Long Game</li>
+                        <li>Newsletter</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p class="p">Community</p>
+                    <ul>
+                        <li>User Community</li>
+                        <li>Humans of Zoho</li>
+                        <li>Affiliate Program</li>
+                        <li>Partner with Us</li>
+                        <li>Influence</li>
+                        <li>Customer Stories</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p class="p">Company</p>
+                    <ul>
+                        <li>About Us</li>
+                        <li> Press</li>
+                        <li>Events</li>
+                        <li>Newsroom</li>
+                        <li>Branding Assets</li>
+                        <li>Zoho Schools</li>
+                        <li>Service Status</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcont">
+            <p id="pa"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="">
+            </p>
+            <p id="pb"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1200px-Facebook_Logo_2023.png"
+                    alt=""></p>
+            <p id="pcc"><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/691/non_2x/instagram-logo-instagram-icon-transparent-free-png.png"
+                    alt=""></p>
+            <p id="pddd"><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/587/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png"
+                    alt=""></p>
+            <p id="pe"><img src="https://cdn-icons-png.freepik.com/256/1384/1384060.png" alt=""></p>
+        </div>
+        <div id="dived">
+            <p>Zoho Home</p>
+            <p>Contact us</p>
+            <p>Security</p>
+            <p>IPR Complaint</p>
+            <p>Anti-spam policy</p>
+            <p>Terms of service</p>
+            <p>Privacy policy</p>
+        </div>
+        <div id="dived2">
+            <p>Cookie policy</p>
+            <p>GDRP Compliance</p>
+            <p class="pp">Abuse policy</p>
+        </div>
+    </section>
+    <section id="s910">
+        <h1>Ready to do your best work?</h1>
+        <h3>Let's get you started.</h3>
+        <button>Access your apps<i class="fa-solid fa-chevron-right"></i></button>
+        <p id="p11">Apps and Extensions<i class="fa-solid fa-chevron-down"></i></p>
+        <p id="p112">Learn<i class="fa-solid fa-chevron-down"></i></p>
+        <p id="p113">Community<i class="fa-solid fa-chevron-down"></i></p>
+        <p id="p114">Products<i class="fa-solid fa-chevron-down"></i></p>
+        <p id="p115">Company<i class="fa-solid fa-chevron-down"></i></p>
+        <p id="p116">Security and privacy<i class="fa-solid fa-chevron-down"></i></p>
+    </section>
+    <section id="seclast">
+        <div id="seclast1"><img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt=""></div>
+        <div id="seclast2"><p>© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p></div>
+    </section>
+    <section id="seclast10">
+        <div id="seclast110"><img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt=""></div>
+        <div id="seclast210"><p>© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p></div>
+    
+    </section>
+    <section id="sone1" >
+        <div id="divone123">
+            <p id="one1" style="width: 30%; height: inherit; background-color: black;"></p>
+        <p id="one2" style="width: 70%; height: inherit; background-color: red;">Sign Up For Free</p>
+    </div>
+</section>
+<section id="sone12">
+    <div id="divone1230">
+        <p id="one10"></p>
+    <p id="one20">Sign Up For Free</p>
+</div>
+</section>
+</body>
+<script src="https://kit.fontawesome.com/16b285b393.js" crossorigin="anonymous"></script>
+
+</html>

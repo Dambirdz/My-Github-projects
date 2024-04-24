@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #nav{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgb(246, 246, 248);
+    }
+    #divimg{
+        width: 85%;
+        height: inherit;
+        align-items: center;
+    }
+    #divimg >img{
+        width: 115px;
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    #divtext{
+        width: 13.5%;
+        display: flex;
+        height: inherit;
+        align-items: center;
+        font-size: 14px;
+        padding-right: 14px;
+        justify-content: space-evenly;
+    }
+    #pd{
+        color: red;
+    }
+    #container{
+        padding-top: 40px;
+        padding-left: 440px;
+    }
+    #h2{
+        font-size: 25px;
+        font-family: sans-serif;
+    }
+    #div1{
+        width: 450px;
+        margin-top: 10px;
+        height: 40px;
+    }
+    #text{
+        padding-top: 20px;
+    }
+    #pt{
+        font-size: 12px;
+        padding-top: 10px;
+    }
+    .divtext{
+        padding-top: 15px;
+        display: flex;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .divtext >p{
+        padding-left: 8px;
+    }
+    #pin{
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+        padding-right: 4px;
+    }
+    #divbut >button{
+        width: 450px;
+        height: 45px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(243, 66, 66);
+        margin-top: 20px;
+        border: none;
+    }
+    #ptt{
+        padding-top: 30px;
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+    }
+    #ptt1{
+        margin-top: -5px;
+        margin-right: -15px;
+    }
+    #ptt >#ptt2 >img{
+        width: 32px;
+        margin-top: -10px;
+    }
+    #ptt >#ptt3 >img{
+        width: 32px;
+        margin-top: -10px;
+    }
+    #ptt >#ptt4 >img{
+        width: 32px;
+        margin-top: -10px;
+    }
+    #pdown{
+        font-size: 12px;
+        padding-top: 100px;
+        padding-left: 90px;
+    }
+    #nav10{
+        display: none;
+    }
+    #s110{
+        display: none;
+    }
+    @media (max-width:450px) {
+        #nav{
+            display: none;
+        }
+        #nav10{
+            width: 100%;
+            display: block;
+            display: flex;
+            height: 70px;
+            justify-content: space-between;
+        }
+        #divimg10{
+        width: 50%;
+        height: inherit;
+        align-items: center;
+    }
+    #divtext10{
+        width: 50%;
+        display: flex;
+        height: inherit;
+        align-items: center;
+        font-size: 18px;
+        padding-right: 14px;
+        justify-content: space-between;
+    }
+        #divimg10 >img{
+        width: 115px;
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+        #s1{
+            display: none;
+        }
+        #s110{
+            display: block;
+        }
+        #container10{
+        padding-top: 40px;
+        padding-left: 32px;
+    }
+    #h210{
+        font-size: 23px;
+        font-family: sans-serif;
+    }
+    #div110{
+        width: 400px;
+        margin-top: 10px;
+        height: 40px;
+    }
+    #text10{
+        padding-top: 20px;
+    }
+    #pt10{
+        font-size: 12px;
+        padding-top: 10px;
+    }
+    .divtext10{
+        padding-top: 15px;
+        display: flex;
+        font-size: 15px;
+        font-weight: bold;
+        width: 100%;
+    } 
+    #pin10{
+        border-bottom: 0.5px solid black;
+        padding-left: 2px;
+        padding-right: 4px;
+    }
+    #divbut10 >button{
+        width: 400px;
+        height: 45px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(243, 66, 66);
+        margin-top: 20px;
+        border: none;
+    }
+    #ptt10{
+        padding-top: 30px;
+        margin-left: 100px;
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+    }
+    #ptt110{
+        margin-top: 25px;
+        margin-left: 135px;
+    }
+    #ptt10 >#ptt210 >img{
+        width: 32px;
+        margin-top: -10px;
+    }
+    #ptt10 >#ptt310 >img{
+        width: 32px;
+        margin-top: -10px;
+    }
+    #ptt10 >#ptt410 >img{
+        width: 32px;
+        margin-top: -10px;
+    }
+    #pdown10{
+        font-size: 14px;
+        padding-top: 80px;
+        padding-left: 60px;
+    }
+    }
+</style>
+<body>
+    <nav id="nav">
+        <div id="divimg">
+            <img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt="">
+        </div>
+        <div id="divtext">
+            <p>Have a Zoho Account?</p>
+            <a href="./Zoho sign in page.html" target="_blank"><p id="pd">Sign in </p></a>
+        </div>
+    </nav>
+    <section id="s1">
+        <div id="container">
+        <div id="divh">
+            <h2 id="h2">Start with your free account today.</h2>
+        </div>
+        <div id="text">
+            <p>Email *</p>
+            <input id="div1" type="search">
+        <div id="text">
+            <p>Password *</p>
+            <input id="div1" type="password">
+            <p id="pt">Your data will be stored in the US data center.</p>
+            <div class="divtext">
+               <input type="checkbox">
+               <p>i agree to the <p id="pin">Terms of Service</p> and <p id="pin">  Privacy Policy</p>.</p>
+            </div>
+        </div>
+        <div id="divbut">
+            <button>SIGN UP FOR FREE</button>
+        </div>
+        <div id="ptt">
+            <p id="ptt1">or sign in using</p>
+            <p id="ptt2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO4lCNs3WmBoiTeHTZTHDzkf5X1v3lae7c-w&usqp=CAU" alt=""></p>
+            <p id="ptt3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" alt=""></p>
+            <p id="ptt4"><img src="https://companieslogo.com/img/orig/MSFT-a203b22d.png?t=1633073277" alt=""></p>
+        </div>
+        <p id="pdown">© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+    </section>
+    <nav id="nav10">
+        <div id="divimg10">
+            <img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt="">
+        </div>
+        <div id="divtext10">
+            <p>Have a Zoho Account?</p>
+            <a href="./Zoho sign in page.html" target="_blank"><p id="pd">Sign in </p></a>
+        </div>
+    </nav>
+    <section id="s110">
+        <div id="container10">
+        <div id="divh10">
+            <h2 id="h210">Start with your free account today.</h2>
+        </div>
+        <div id="text10">
+            <p>Email *</p>
+            <input id="div110" type="search" required>
+        <div id="text10">
+            <p>Password *</p>
+            <input id="div110" type="password" required>
+            <p id="pt10">Your data will be stored in the US data center.</p>
+            <div class="divtext10">
+                <input type="checkbox">
+                <p>i agree to the <p id="pin10">Terms of Service</p> and <p id="pin10">  Privacy Policy</p>.</p>
+            </div>
+        </div>
+        <div id="divbut10">
+            <button>SIGN UP FOR FREE</button>
+        </div>
+        <p id="ptt110">or sign in using</p>
+        <div id="ptt10">
+            
+            <p id="ptt210"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO4lCNs3WmBoiTeHTZTHDzkf5X1v3lae7c-w&usqp=CAU" alt=""></p>
+            <p id="ptt310"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" alt=""></p>
+            <p id="ptt410"><img src="https://companieslogo.com/img/orig/MSFT-a203b22d.png?t=1633073277" alt=""></p>
+        </div>
+        <p id="pdown10">© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
+    </div>
+    </section>
+</body>
+
+<script src="https://kit.fontawesome.com/16b285b393.js" crossorigin="anonymous"></script>
+</html>

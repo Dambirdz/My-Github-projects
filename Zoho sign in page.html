@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #bigman{
+        background-color: #EBEBEB;
+        margin-top: -69px;
+        height: 750px;
+    }
+    #bigcontainer{
+        width: 65%;
+        height: 530px;
+        padding-top: 80px;
+        margin-left: 240px;
+    }
+    #container{
+        width: 100%;
+        height: 530px;
+        background-color: #ffff;
+        display: flex;
+        margin-top: 95px;
+    }
+    #divcont1{
+        width: 57%;
+        height: inherit;
+        border-right: 2px solid#EBEBEB;
+    }
+    #divcont2{
+        width: 43%;
+        height: inherit;
+    }
+    #div1{
+        width: 100%;
+        height: 130px;
+        justify-content: space-evenly;
+        display: flex;
+    }
+    #div1 >p>img{
+        width: 100px;
+        padding-top: 60px;
+    }
+    #div1 >button{
+        width: 180px;
+        height: 40px;
+        background-color: #2131A4;
+        border: none;
+        margin-top: 60px;
+        border-radius: 50px;
+        color: white;
+        margin-left: 90px;
+    }
+    #div1 >button>i{
+        padding-right: 10px;
+    }
+    #email{
+        width: 400px;
+        height: 50px;
+        margin-top: 20px;
+        font-size: 15px;
+        background-color: #F8F8F8;
+        border: 1px solid #f1dede;
+    }
+    #divcont{
+        padding-left: 53px;
+        padding-top: 10px;
+    }
+    .p1{
+        font-size: 30px;
+    }
+    .p2{
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    #but12{
+        width: 403px;
+        height: 45px;
+        color: white;
+        border-radius: 5px;
+        background-color: #159AFF;
+        margin-top: 25px;
+        border: none;
+    }
+    .p3{
+        font-size: 18px;
+        padding-top: 40px;
+        color: #5f5e5e;
+    }
+    #cont {
+        display: flex;
+        width: 90%;
+        height: 40px;
+        justify-content: space-evenly;
+        padding-top: 12px;
+    }
+    #p1 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: inherit;
+    }
+    #p2 >img{
+        width: 25px;
+        border-radius: 5px;
+        padding-top: 2px;
+        height: inherit;
+    }
+    #p3 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: inherit;
+    }
+    #p4 >img{
+        width: 33px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p5 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p6 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p7 >img{
+        width: 35px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p8{
+        width: 30px;
+        background-color: #9e9999;
+        border-radius: 5px;
+        height: 30px;
+        color: #ffff;
+        font-size: 25px;
+        text-align: center;
+        align-items: center;
+    }
+    #end1{
+        display: flex;
+        margin-top: 10px;
+        width: 90%;
+    }
+    #pd{
+        display: flex;
+        width: 41%;
+        justify-content: space-between;
+    }
+    .ppd{
+        color: #159AFF;
+        padding-left: 185px;
+        margin-top: -17px;
+        width: 50%;
+    }
+    #divcont2 >img{
+        width: 300px;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+    #pdd1{
+        font-size: 19px;
+        font-weight: bold;
+        padding-top: 40px;
+        padding-left: 90px;
+    }
+    #pdd2{
+        padding-top: 25px;
+        font-size: 15px;
+        padding-left: 35px;
+    }
+    #pdd3{
+        font-size: 15px;
+        padding-left: 29px;
+    }
+    #pdd4{
+        font-size: 15px;
+        padding-left: 125px;
+    }
+    #divcont2 >button{
+        width: 110px;
+        height: 35px;
+        color: #159AFF;
+        border-radius: 20px;
+        border: none;
+        background-color: #ECF7FE;
+        margin-top: 30px;
+        margin-left: 110px;
+    }
+    #eed{
+        margin-top: 110px;
+        margin-left: 500px;
+        color: #7a7d80;
+    }
+    #bigman10{
+        display: none;
+    }
+    #s110{
+        display: none;
+    }
+    @media (max-width:450px) {
+        #bigman, #s1{
+            display: none;
+        }
+        #bigman10, #s110{
+            display: block;
+        }
+    #div110{
+        width: 75%;
+        height: 130px;
+        justify-content: space-evenly;
+        display: flex;
+    }
+    #div110 >p>img{
+        width: 100px;
+        padding-top: 60px;
+    }
+    #div110 >button{
+        width: 140px;
+        height: 40px;
+        background-color: #2131A4;
+        border: none;
+        margin-top: 60px;
+        border-radius: 50px;
+        color: white;
+        margin-left: 90px;
+    }
+    #div110 >button>i{
+        padding-right: 10px;
+    }
+    #email10{
+        width: 300px;
+        height: 50px;
+        margin-top: 20px;
+        font-size: 13px;
+        background-color: #F8F8F8;
+        border: 1px solid #f1dede;
+    }
+    #divcont10{
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .p110{
+        font-size: 30px;
+    }
+    .p210{
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    #button120{
+        width: 320px;
+        height: 45px;
+        color: white;
+        border-radius: 5px;
+        background-color: #159AFF;
+        margin-top: 25px;
+        border: none;
+    }
+    .p310{
+        font-size: 18px;
+        padding-top: 30px;
+        color: #5f5e5e;
+    }
+    #cont10 {
+        display: flex;
+        width: 70%;
+        height: 40px;
+        justify-content: space-evenly;
+        padding-top: 10px;
+    }
+    #p110 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: inherit;
+    }
+    #p210 >img{
+        width: 25px;
+        border-radius: 5px;
+        padding-top: 2px;
+        height: inherit;
+    }
+    #p310 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: inherit;
+    }
+    #p410 >img{
+        width: 33px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p510 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p610 >img{
+        width: 30px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p710 >img{
+        width: 35px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    #p810{
+        width: 30px;
+        background-color: #9e9999;
+        border-radius: 5px;
+        height: 30px;
+        color: #ffff;
+        font-size: 25px;
+        text-align: center;
+        align-items: center;
+        margin-left: 12px;
+    }
+    #pd10{
+        display: flex;
+        padding-top: 10px;
+        width: 35%;
+        font-size: 13px;
+    }
+    .ppd{
+        margin-left: -35px;
+    }
+    #eed10{
+        font-size: 13px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    }
+</style>
+<body>
+    <section id="bigman">
+    <div id="bigcontainer">
+        <div id="container">
+        <div id="divcont1">
+            <div id="div1">
+               <p><img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt=""></p> 
+                <button><i class="fa-solid fa-qrcode"></i>Try smart sign in</button>
+            </div>
+            <div id="divcont">
+            <p class="p1">Sign in</p>
+            <p class="p2">to access Zoho Home</p>
+            <input type="email" placeholder="Email address or mobile number" id="email" required>
+            <a href="./Zoho mail.html" target="_blank"><button id="but12"> Next </button></a>
+            <p class="p3">Sign in using</p>
+            <div id="cont">
+                <p id="p1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa5H8TEFatSF8vnmI5ppKSwnKAOY1iqpzRcw&usqp=CAU" alt=""></p>
+                <p id="p2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt=""></p>
+                <p id="p3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI22G2Gnv2PqH-CW9br3C1ADNKFipQP04M9g&usqp=CAU" alt=""></p>
+                <p id="p4"><img src="https://static.designboom.com/wp-content/uploads/2023/09/facebook-new-logo-change-designboom-02.jpg" alt=""></p>
+                <p id="p5"><img src="https://businessyield.com/wp-content/uploads/2022/10/LinkedIn-Logo-512x500.png" alt=""></p>
+                <p id="p6"><img src="https://seeklogo.com/images/T/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com.png" alt=""></p>
+                <p id="p7"><img src="https://pbs.twimg.com/media/ExbuZ5qWgAMZ1xs?format=png&name=4096x4096" alt=""></p>
+                <p id="p8">...</p>
+            </div>
+            <div class="end1">
+                <p id="pd">Don't have a Zoho account? <p class="ppd">Sign Up Now</p></p>
+            </div>
+        </div>
+    </div>
+        <div id="divcont2">
+           <img src="https://static.zohocdn.com/iam/v2/components/images/MFA_illustration.1afa6dddd07d21ad33a652ec63d146d6.svg" alt="">
+           <p id="pdd1">MFA for all accounts</p>
+           <p id="pdd2">Secure online accounts with OneAuth 2FA.</p>
+           <p id="pdd3">Back up OTP secrets and never lose access to</p>
+           <p id="pdd4">your accounts.</p>
+           <button>Learn more</button>
+        </div>
+    </div>
+    </div>
+    <p id="eed">© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
+</section>
+    <section id="bigman10">
+    <div id="bigcontainer10">
+        <div id="container10">
+        <div id="divcont110">
+            <div id="div110">
+               <p><img src="https://seeklogo.com/images/Z/zoho-corporation-logo-E83548B590-seeklogo.com.png" alt=""></p> 
+                <button><i class="fa-solid fa-qrcode"></i>Try smart sign in</button>
+            </div>
+            <div id="divcont10">
+            <p class="p110">Sign in</p>
+            <p class="p210">to access Zoho Home</p>
+            <input type="email" placeholder="Email address or mobile number" id="email10" required>
+            <a href="./Zoho mail.html" target="_blank"><button id="button120"> Next </button></a>
+            <p class="p310">Sign in using</p>
+            <div id="cont10">
+                <p id="p110"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa5H8TEFatSF8vnmI5ppKSwnKAOY1iqpzRcw&usqp=CAU" alt=""></p>
+                <p id="p210"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt=""></p>
+                <p id="p310"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI22G2Gnv2PqH-CW9br3C1ADNKFipQP04M9g&usqp=CAU" alt=""></p>
+                <p id="p410"><img src="https://static.designboom.com/wp-content/uploads/2023/09/facebook-new-logo-change-designboom-02.jpg" alt=""></p>
+                <p id="p510"><img src="https://businessyield.com/wp-content/uploads/2022/10/LinkedIn-Logo-512x500.png" alt=""></p>
+                <p id="p610"><img src="https://seeklogo.com/images/T/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com.png" alt=""></p>
+                <p id="p710"><img src="https://pbs.twimg.com/media/ExbuZ5qWgAMZ1xs?format=png&name=4096x4096" alt=""></p>
+                
+            </div><p id="p810">...</p>
+            <div class="end110">
+                <p id="pd10">Don't have a Zoho account? <p class="ppd">Sign Up Now</p></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <p id="eed10">© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
+</section>
+</body>
+<script src="https://kit.fontawesome.com/16b285b393.js" crossorigin="anonymous"></script>
+</html>
